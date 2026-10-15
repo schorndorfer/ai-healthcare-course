@@ -1,0 +1,20 @@
+/* Keep Moon's colors; replace its condensed, all-caps heading typography. */
+:root {
+  --r-main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --r-heading-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --r-heading-text-transform: none;
+  --r-heading-font-weight: 550;
+  --r-heading-letter-spacing: -0.025em;
+  --r-main-font-size: 34px;
+  --r-heading1-size: 2.15em;
+  --r-heading2-size: 1.42em;
+  --r-heading3-size: 1.16em;
+}
+
+.reveal .slides section {
+  line-height: 1.42;
+}
+
+.reveal .slides li {
+  margin-bottom: 0.25em;
+}

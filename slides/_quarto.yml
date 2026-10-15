@@ -5,6 +5,7 @@ project:
 format:
   revealjs:
     theme: moon
+    css: typography.css
     slide-number: true
     transition: fade
     footer: "AI and LLMs in Healthcare · Synthetic data only"
