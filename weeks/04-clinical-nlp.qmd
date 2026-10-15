@@ -1,0 +1,19 @@
+# Week 4 — Clinical NLP and structured extraction
+
+**April 21, 2027 · Lab 2 (graded); project proposal due.** [Slides: systems](../slides/systems.html) · [R/Python examples](../resources.qmd#code-and-notebooks)
+
+## Learn
+
+- Frame extraction as a typed prediction with explicit unknown and negated states.
+- Compare prompting, retrieval, and fine-tuning as adaptation options.
+- Evaluate de-identification with human review; a model's output is **not** proof of safe release.
+
+Suppose an invented note reads "Patient reports no fever; cough for 2 days." A schema with `fever_present: false`, `cough_present: true`, and `duration_days: 2` allows validation. A missing field is not the same as `false`. Define an abstention path for ambiguous notes and score field-level precision/recall against reviewed labels.
+
+**Class activity:** annotate five invented notes independently, resolve disagreements, and compare a rule-based baseline to a schema-constrained LLM response. The [local extraction examples](../resources.qmd#code-and-notebooks) score *cached, invented predictions*; they never call an API.
+
+**R lab direction:** use instructor-approved synthetic notes with `ellmer` type specifications (`type_object`, `type_array`); validate the schema, retain error examples, and record model settings. Follow instructor-provided mocked responses when provider access is unavailable.
+
+**Project checkpoint:** submit intended user/use, population need, provenance/permissions, baseline, metrics and subgroup analysis, risk controls, human approval, and implementation setting. **Check:** Why is a valid JSON object not sufficient evidence of a correct extraction?
+
+**Prepare:** Wornow et al., *The shaky foundations of large language models and foundation models for electronic health records* (2023); instructor ellmer tutorial.

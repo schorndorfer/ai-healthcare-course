@@ -1,0 +1,45 @@
+project:
+  type: book
+  output-dir: _site
+  resources:
+    - docs/AI_LLM_Healthcare_Syllabus_Proposal_Spring2027_R.pdf
+    - notebooks/*.py
+    - examples/**/*.py
+    - examples/**/*.R
+
+book:
+  title: "AI and Large Language Models in Healthcare"
+  subtitle: "From Deep Learning to Agentic Systems · Spring 2027"
+  author: "Will Thompson"
+  search: true
+  chapters:
+    - index.qmd
+    - setup.qmd
+    - part: "Foundations"
+      chapters:
+        - weeks/01-foundations.qmd
+        - weeks/02-representations.qmd
+        - weeks/03-llms.qmd
+        - weeks/04-clinical-nlp.qmd
+    - part: "Building systems"
+      chapters:
+        - weeks/05-rag.qmd
+        - weeks/06-tools.qmd
+        - weeks/07-agents.qmd
+    - part: "Trust and implementation"
+      chapters:
+        - weeks/08-evaluation.qmd
+        - weeks/09-implementation.qmd
+        - weeks/10-presentations.qmd
+    - project.qmd
+    - resources.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-copy: true
+    link-external-newwindow: true
+
+execute:
+  enabled: false

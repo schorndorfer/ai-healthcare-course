@@ -1,0 +1,31 @@
+# Project and assessment guide
+
+This page summarizes the **proposal**, not a replacement for Canvas instructions. Total: 100 points.
+
+| Component | Points | Timing |
+|---|---:|---|
+| Two closed-to-AI quizzes | 15 | Weeks 3, 7 |
+| Four applied R lab notebooks | 30 | Weeks 2, 4, 5, 7 |
+| Critical appraisal | 10 | May 30, 2027 |
+| Group project proposal | 5 | Week 4 |
+| Working system, code, evaluation report and individual contribution evidence | 30 | June 4, 2027 |
+| Presentation | 10 | June 2, 2027 |
+
+Form groups of 2–3. Choose a public-health use case with approved data: for example, grounded guidance Q&A over a versioned public corpus, a supervised report summarizer, or extraction from *invented* registry examples. The final-system score includes **25 group points and 5 individual points** for evidence of contribution and reflection.
+
+## Week 4 proposal checklist
+
+- Intended user, population, decision, expected benefit and exclusions.
+- Dataset/corpus provenance, license, permissions and processing location.
+- Baseline, held-out evaluation cases, primary metric, subgroup or failure-mode analysis.
+- Threat model: sensitive data, injection, least-privilege tools, human approvals.
+- Implementation setting: workflow owner, review, maintenance and stop conditions.
+
+## Final reproducibility checklist
+
+- Run instructions, dependency versions, provider/model and settings, corpus version, access dates, seed if used, and permitted cached/mock fallback.
+- Evaluation cases and labels (only if sharing is authorized), baseline and system outputs, metric definitions/denominators, error cases, limits of generalizability.
+- Sanitized traces, cost/latency estimates, risk register, documented human oversight and rollback plan.
+- AI-use disclosure: purpose, provider/model/date, affected work, sanitized prompts/workflow, verification. **Never include sensitive inputs or credentials.**
+
+For the individual critical appraisal, assess task framing, provenance, evaluation validity, subgroup performance, bias, privacy, security, regulatory posture, and deployment readiness. Findings should be understandable to both technical and nontechnical audiences.

@@ -1,0 +1,17 @@
+# Week 2 — Representations and transformers
+
+**April 7, 2027 · Lab 1: clinical text embeddings (graded).** [Slides: foundations](../slides/foundations.html) · [Interactive attention notebook](../notebooks/01-attention.py)
+
+## Learn
+
+- Distinguish tokens from words and contextual embeddings from fixed word vectors.
+- Calculate scaled dot-product attention and explain why it is not a causal explanation.
+- Compare embedding similarity with task-specific retrieval or classification performance.
+
+For token representations $X$, projections give queries $Q=XW_Q$, keys $K=XW_K$, values $V=XW_V$. Self-attention is $\operatorname{softmax}(QK^\top/\sqrt{d_k})V$; a causal mask removes future positions. Tokenization, truncation, and context windows can change which clinical concepts the model sees.
+
+**Class activity:** tokenize invented short notes with negation ("no fever" versus "fever"), then inspect nearest neighbors; discuss what a similarity score cannot prove. Use the optional [marimo notebook](../notebooks/01-attention.py) to vary attention scale with no model download.
+
+**R lab direction:** construct embeddings from instructor-approved synthetic notes; document model/version and compare a simple lexical baseline on held-out examples. Do not upload patient-derived text. **Check:** Why could an embedding model match "no fever" to "fever," and what downstream test would reveal that error?
+
+**Prepare:** Keydana, R torch text (selected sections); 3Blue1Brown, *Attention in transformers, step-by-step*; Alammar, *The Illustrated Transformer*. Optional: Vaswani et al., *Attention Is All You Need* (2017).

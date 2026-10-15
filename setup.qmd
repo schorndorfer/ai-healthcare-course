@@ -1,0 +1,38 @@
+# Setup and safe data handling
+
+## Computing
+
+For the syllabus labs, install R 4.4 or newer, RStudio or Positron, and [Quarto](https://quarto.org/docs/get-started/). The instructor's Canvas materials and `renv.lock` (when provided) are authoritative for graded work. This repository does **not** supply the instructor's corpus, API credits, or final `renv.lock`.
+
+For optional local examples:
+
+```bash
+# From repository root; no provider credentials required
+uv sync
+uv run python examples/python/evaluate_extraction.py
+uv run marimo run notebooks/01-attention.py
+uv run marimo run notebooks/02-evaluation.py
+Rscript examples/r/evaluate_extraction.R
+quarto render
+```
+
+Install R separately for `Rscript`. Rendered pages are static: the marimo `.py` files run **locally** and are linked for download, not executed on GitHub Pages. A local R lab template can be built from the code in each chapter; code snippets in this book are illustrative and not executed during site builds.
+
+## Lab 0: environment and permission check
+
+1. Verify R, Quarto, and an editor; record `R.version.string` and `quarto --version`.
+2. Identify the owner, source, license or data-use terms, and allowed processing location for every dataset you propose to use.
+3. Classify the data: synthetic/public, sensitive but approved locally, or restricted. If uncertain, **stop and ask**.
+4. Store secrets in a local environment or approved secrets manager, never in notebooks, commits, screenshots, prompts, or public logs. Use mocked responses for core exercises if provider access fails.
+5. Document provider, model/version, settings, retrieval-corpus version, access date, and human-review plan when applicable.
+
+| Source | Public site? | External model? | Rule |
+|---|---|---|---|
+| Invented examples in this repo | Yes | Only after checking provider terms | No real-person details |
+| Public guidance with compatible license | Check attribution/terms | Check terms | Version and cite source |
+| De-identified patient-derived records | No by default | No by default | Local only unless explicitly authorized |
+| PHI, credentials, restricted records | No | No | Never upload |
+
+## Disclosure and verification
+
+Generative AI use on coursework requires a disclosure: purpose, tool/provider/model and date, affected sections, **sanitized** prompt/workflow summary, and how outputs were verified. Do not include restricted data or secrets in the disclosure. The two quizzes are closed to generative-AI assistance. See the [proposal PDF](docs/AI_LLM_Healthcare_Syllabus_Proposal_Spring2027_R.pdf) for full policy and assessment details.

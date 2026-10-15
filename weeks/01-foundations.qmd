@@ -1,0 +1,17 @@
+# Week 1 — From regression to deep learning {#sec-week1}
+
+**March 31, 2027 · Lab 0 (ungraded).** [Slides: foundations](../slides/foundations.html)
+
+## Learn
+
+- Relate linear regression to a small neural network: weights, activations, prediction, loss, gradient, update.
+- Explain why a validation set and a prespecified clinical or public-health task matter more than training accuracy.
+- Classify data and choose an approved computing environment before building a pipeline.
+
+A model learns parameters by minimizing a loss on training examples. For a scalar predictor $\hat y=wx+b$ and mean squared error $L=(y-\hat y)^2$, $\partial L/\partial w=-2x(y-\hat y)$. Gradient descent updates $w \leftarrow w-\eta\partial L/\partial w$; the learning rate $\eta$ sets the step size. Adding nonlinear layers expands what the model can represent, but cannot fix a flawed target or a nonrepresentative sample.
+
+**Class activity:** draw a data flow from dataset to model provider to logs. Mark every place sensitive data, secrets, or derived outputs could leave the approved boundary. Complete the [Lab 0 checklist](../setup.qmd#lab-0-environment-and-permission-check).
+
+**R practice:** compute a loss and finite-difference gradient on *invented* observations; compare against `torch` autograd in the instructor lab. **Check:** What does a low training loss fail to establish about population benefit?
+
+**Prepare:** Rajkomar, Dean & Kohane, *Machine Learning in Medicine* (2019); Keydana, *Deep Learning and Scientific Computing with R torch*, tensors/autograd chapters. Optional: Sculley et al., *Hidden Technical Debt in Machine Learning Systems* (2015).

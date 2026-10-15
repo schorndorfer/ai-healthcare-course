@@ -1,0 +1,48 @@
+---
+title: "Trust and implementation: Weeks 8–10"
+subtitle: "AI and LLMs in Healthcare · Spring 2027"
+---
+
+## Week 8 · evaluation
+
+- Compare with a baseline on held-out and negative cases.
+- Report per-group numerators/denominators, not just averages.
+- Score retrieval, citations, final answers and trajectories separately.
+- Audit judge-model ratings against independent human ratings.
+
+## Week 8 · observability
+
+Record run ID, model/settings, corpus version, tool outcomes, time, cost and **redacted** error codes. Logs must follow the same data-use restrictions as prompts.
+
+**Exercise:** recalculate subgroup recall after correcting a single false negative. When are estimates too unstable to interpret?
+
+---
+
+## Week 9 · responsible deployment
+
+- Target choice can encode structural inequity.
+- Privacy, HIPAA scope, security, device regulation and transparency have different requirements.
+- Benchmark success is not workflow adoption or patient benefit.
+
+**Exercise:** map the intended decision, affected population, reviewer, recourse and stop condition.
+
+## Week 9 · appraisal
+
+Provenance · validity · subgroup performance · bias · privacy · security · regulatory posture · deployment readiness
+
+**Due:** Critical appraisal Sunday, May 30.
+
+---
+
+## Week 10 · present the evidence
+
+1. Show baseline, intended use and data permissions.
+2. Demonstrate success **and** a failure/refusal.
+3. Report held-out metrics, subgroup limitations and costs.
+4. State what humans review before deployment.
+
+**Present:** June 2 · **Report/code/individual reflection:** June 4.
+
+## Closing question
+
+When retrieval, analysis and drafting become agentic, which responsibilities shift to public-health practitioners rather than disappearing?

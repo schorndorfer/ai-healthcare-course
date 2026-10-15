@@ -1,0 +1,55 @@
+---
+title: "Foundations: Weeks 1–3"
+subtitle: "AI and LLMs in Healthcare · Spring 2027"
+---
+
+## From regression to networks
+
+- Prediction → loss → gradient → update
+- A good training fit ≠ valid public-health intervention
+- Specify **population, decision, outcome** first
+
+::: notes
+Ask students to draw the gradient update for one weight and name a source of target leakage.
+:::
+
+## Safety before computation
+
+1. Classify data and verify provenance and permissions.
+2. Decide where data and logs may be processed.
+3. Keep PHI, restricted records and secrets out of hosted APIs.
+4. Use synthetic examples for public demonstrations.
+
+## Week 1 · discussion
+
+An invented dataset predicts healthcare spending. What happens if the outcome is a proxy for health need but access to care varies between groups?
+
+---
+
+## Representations · Week 2
+
+- Token ≠ word; context changes representations.
+- $\operatorname{Attention}(Q,K,V)=\operatorname{softmax}(QK^\top/\sqrt{d_k})V$
+- A similarity score is not clinical equivalence.
+
+**Exercise:** compare “fever” and “no fever.” What should a downstream test include?
+
+## Week 2 · lab prompt
+
+On synthetic notes, compare an embedding-based method with a lexical baseline. Document the model and test on held-out negations and abbreviations.
+
+---
+
+## LLMs · Week 3
+
+- Pretraining predicts tokens; instruction tuning shapes task behavior.
+- Alignment changes preferences, not factual guarantees.
+- Fluent answers can be unsupported or stale.
+
+**Before prompting:** intended use, excluded use, baseline, held-out test cases, failure costs.
+
+## Pause and discuss
+
+For an immunization guidance assistant: which errors require escalation, and what would make the system refuse to answer?
+
+**Week 3:** Quiz 1 is closed to AI assistance.

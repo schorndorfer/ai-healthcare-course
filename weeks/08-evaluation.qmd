@@ -1,0 +1,19 @@
+# Week 8 — Evaluation and observability
+
+**May 19, 2027 · Bring a runnable baseline, draft evaluation set, risk register, and error analysis.** [Slides: trust](../slides/trust.html) · [Evaluation notebook](../notebooks/02-evaluation.py)
+
+## Learn
+
+- Compare system performance to a baseline on held-out cases, including negative cases.
+- Report retrieval, citation, subgroup, cost, and latency metrics separately.
+- Use human ratings and judge models carefully; log enough for audits without exposing private inputs.
+
+For a binary extractor, precision = TP/(TP+FP) and recall = TP/(TP+FN), when denominators are nonzero. Inspect per-group denominators and errors, not just overall scores; small groups yield unstable estimates. A judge model can help triage errors, but its ratings must be checked against independent human labels and it can favor fluent unsupported answers. Store run ID, corpus version, model/version, settings, tool outcomes, timing, and redacted error codes; never log secrets or restricted text to an unapproved service.
+
+**Class activity:** score the [invented extraction example](../resources.qmd#code-and-notebooks) and change one false negative to a true positive. Inspect how recall shifts for each group; discuss whether the group sizes support any inference.
+
+**R practice:** create a `vitals` dataset/solver/scorer with instructor-provided examples; keep pipeline tracing as a separate task. Use the [optional marimo notebook](../notebooks/02-evaluation.py) for offline metric exploration.
+
+**Check:** If citation recall improves but unsupported claims increase, did the system improve?
+
+**Prepare:** Zheng et al., *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena* (2023); instructor vitals and tracing tutorial.

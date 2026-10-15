@@ -1,0 +1,19 @@
+# Week 7 — Supervised analytic agents
+
+**May 12, 2027 · Lab 4 (graded); Quiz 2 (closed to AI assistance).** [Slides: systems](../slides/systems.html)
+
+## Learn
+
+- Assemble a bounded plan → tool → observation → review loop.
+- Distinguish task success from safe behavior and inspect trajectories, not just final answers.
+- Design fallback behavior for tool errors and requests outside the approved use.
+
+For an invented surveillance table, offer allowlisted operations such as `count_by_region()` and `weekly_trend()`. Restrict arguments to enumerated columns, cap tool calls and output sizes, and prohibit write access. Before a report leaves the system, a reviewer checks numerator, denominator, date range, and any potentially identifying small cells. Tool outputs remain data rather than new instructions.
+
+**Class activity:** role-play an agent using paper tool cards. Include a failing query, an ambiguous user request, and a malicious tool result. Trace why a proposed action was accepted or rejected.
+
+**R lab direction:** implement an allowlisted analytic tool with `ellmer` and/or `mcptools` using only instructor-approved data. Test an ordinary request, an injection, an out-of-scope query, and a request requiring approval. Save sanitized trajectories for evaluation.
+
+**Check:** Why might a correct final table still represent an unsafe agent run?
+
+**Prepare:** instructor tutorial on a constrained R analytic harness; optional readings on agent-trajectory evaluation.

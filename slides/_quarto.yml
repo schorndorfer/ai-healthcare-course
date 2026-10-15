@@ -1,0 +1,13 @@
+project:
+  type: default
+  output-dir: ../_site/slides
+
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    transition: fade
+    footer: "AI and LLMs in Healthcare · Synthetic data only"
+
+execute:
+  enabled: false

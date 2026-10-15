@@ -1,0 +1,15 @@
+[project]
+name = "ai-healthcare-course"
+version = "0.1.0"
+description = "Open, R-first AI in healthcare course book and optional Python labs"
+readme = "README.md"
+authors = [
+    { name = "Will Thompson", email = "wkt@northwestern.edu" }
+]
+requires-python = ">=3.12"
+dependencies = ["marimo>=0.20,<1"]
+
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"

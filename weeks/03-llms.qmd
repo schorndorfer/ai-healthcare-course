@@ -1,0 +1,17 @@
+# Week 3 — LLM training, alignment, and failure modes
+
+**April 14, 2027 · Quiz 1 (closed to AI assistance).** [Slides: foundations](../slides/foundations.html)
+
+## Learn
+
+- Separate pretraining (next-token prediction), instruction tuning, and preference-based alignment.
+- Describe hallucination and distribution shift without treating fluent output as evidence.
+- Define intended use, a baseline, an evaluation set, and a metric **before** choosing a prompt.
+
+Prompting is an interface to a probabilistic model, not a guarantee. A clinically plausible answer may be unsupported or out of date. Scope the question: *For which user, population, decision, and action?* Compare to a simple baseline (for example, keyword lookup or a fixed template), and separate development examples from held-out evaluation examples.
+
+**Class activity:** for a hypothetical immunization-guidance assistant, write an intended-use statement and three excluded uses. Specify whether a missed contraindication or an unnecessary referral is costlier; then choose sensitivity, specificity, or an appropriate error metric accordingly.
+
+**Project checkpoint:** choose a permitted public or synthetic source and design a small test set; do not tune on the held-out set. **Check:** Can a lower average error conceal a dangerous subgroup failure?
+
+**Prepare:** Thirunavukarasu et al., *Large language models in medicine* (2023); Singhal et al., *Large language models encode clinical knowledge* (2023).

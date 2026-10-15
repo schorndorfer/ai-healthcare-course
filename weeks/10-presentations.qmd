@@ -1,0 +1,13 @@
+# Week 10 — Presentations and synthesis
+
+**June 2, 2027 · Presentations in class; final report, code, and individual statement due Friday, June 4.** [Slides: trust](../slides/trust.html)
+
+## Present a defensible system
+
+In a short demo, name the intended user, population and decision; show the **baseline before the new system**, its data permissions and corpus/model versions, held-out performance and errors, subgroup limitations, safeguards and approval gates, and one case where the system refuses or escalates. Show a real failure, not just a polished successful run. Do not display restricted records or credentials.
+
+**Class activity:** each group gets a stakeholder question: "What would you need to see before trusting this for your setting?" Record the unanswered questions as deployment requirements rather than hiding them in a limitations slide.
+
+**Synthesis:** identify which parts of analysis, retrieval and drafting can be automated, which still need qualified human judgment, and what new monitoring responsibilities a public-health team inherits.
+
+**No new readings.** See the [project guide](../project.qmd) for the submission checklist.

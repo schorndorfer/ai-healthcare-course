@@ -1,0 +1,17 @@
+# Week 9 — Responsible AI and implementation
+
+**May 26, 2027 · Critical appraisal due Sunday, May 30.** [Slides: trust](../slides/trust.html)
+
+## Learn
+
+- Examine whose outcomes are measured, whose needs define the target, and who is missing from evaluation.
+- Distinguish privacy, security, fairness, clinical validity, and regulatory questions.
+- Connect a technical result to workflow, stakeholder needs, and implementation outcomes.
+
+Bias can enter through a proxy target: an algorithm trained to predict spending may systematically underestimate illness burden when access to care differs. Stratified metrics help reveal a problem but do not by themselves solve target choice or distribution shift. HIPAA applicability depends on context and actors; "not covered by HIPAA" does not imply safe or unregulated. FDA device resources and ASTP/ONC HTI-1 transparency requirements have specific scopes; determine applicability with qualified institutional review rather than claiming blanket clearance.
+
+**Class activity:** map intended user, patient/population, decision point, potential harms, recourse, and escalation. Use CFIR or RE-AIM to ask whether a model that works in a benchmark could actually be adopted and maintained.
+
+**Project checkpoint:** revise risk register, subgroup/error analysis, and deployment plan. **Check:** What evidence would justify a limited pilot, and what evidence would stop it?
+
+**Prepare:** Obermeyer et al., *Dissecting racial bias in an algorithm used to manage the health of populations* (2019); [ASTP/ONC HTI-1](https://www.healthit.gov/topic/laws-regulation-and-policy/health-data-technology-and-interoperability-certification-program-updates-algorithm-transparency-and-information-sharing-hti-1-final-rule); [FDA AI-enabled medical devices](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices).

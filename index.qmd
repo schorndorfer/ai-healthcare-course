@@ -1,0 +1,22 @@
+# Welcome
+
+**PUB_HLTH 4XX (proposed) · Spring Quarter 2027 · 10 weeks**
+
+This open course book accompanies the [proposed syllabus](docs/AI_LLM_Healthcare_Syllabus_Proposal_Spring2027_R.pdf). It is a teaching resource, **not** the final approved syllabus. Course number, delivery format, assignments, and policies remain subject to confirmation; registered students should use Canvas for authoritative announcements and submissions.
+
+The course moves from deep-learning foundations through clinical NLP, retrieval-augmented generation (RAG), supervised agents, evaluation, and responsible implementation. The primary labs are **R-first**, as specified in the syllabus. Python and [marimo](https://marimo.io/) are optional, local companions illustrating the same ideas, not substitutes for graded R work.
+
+| Phase | Weeks | Build / question |
+|---|---|---|
+| Foundations | 1–4 | How do neural models learn, and how do we safely extract information? |
+| Systems | 5–7 | How do retrieval and tools change what a model can do? |
+| Trust | 8–10 | How do we know it works for the intended population and setting? |
+
+Each week includes learning goals, a classroom activity, an R lab direction, a check-for-understanding question, and project milestones. Downloadable [slide decks](resources.qmd#slides) and [code](resources.qmd#code-and-notebooks) support instruction and independent practice.
+
+::: {.callout-important}
+## Data boundary
+All public examples use invented or aggregate synthetic data. Never send PHI, restricted or patient-derived data, secrets, or API keys to a hosted model. De-identification is a prediction to evaluate, **not** authorization to disclose data. Consult the instructor and the applicable data-use agreement before any external processing.
+:::
+
+**Before class:** start with [Setup and safe data handling](setup.qmd). No hosted API account or paid credits are needed for the public examples.

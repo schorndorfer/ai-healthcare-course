@@ -1,0 +1,19 @@
+# Week 5 — Retrieval-augmented generation
+
+**April 28, 2027 · Lab 3 (graded).** [Slides: systems](../slides/systems.html)
+
+## Learn
+
+- Version, chunk, and index a permissioned public-health guidance corpus.
+- Separate retrieval recall from answer correctness and citation support.
+- Treat retrieved text as untrusted input, including instructions embedded in source documents.
+
+A RAG pipeline retrieves passages, presents them as *evidence* to a model, and cites source identifiers in its answer. It cannot make an incorrect or outdated source correct. Freeze a corpus snapshot, record source URLs, access dates and document versions, and map every chunk back to the full document. For evaluation, use questions with known supporting passages and unanswerable questions; report retrieval recall@k and the fraction of answer claims supported by cited passages separately.
+
+**Class activity:** hand-search a tiny, versioned guidance set. Create a question whose answer is absent and practice saying "not found in this corpus" rather than inventing guidance. Label a malicious passage that tells the assistant to ignore the user; why should that text not become an instruction?
+
+**R lab direction:** build a `ragnar` index over the instructor-provided versioned CDC/WHO corpus; compare lexical and vector retrieval, inspect misses, verify citations by reading the cited passage. Never silently substitute a live changing website for the supplied snapshot.
+
+**Check:** Can an answer contain a real citation that does not support its claim? How would you score it?
+
+**Prepare:** Lewis et al., *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks* (2020); instructor ragnar tutorial.

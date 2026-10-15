@@ -1,0 +1,19 @@
+# Week 6 — Tools, MCP, and threat modeling
+
+**May 5, 2027 · Critical-appraisal topic and source approval.** [Slides: systems](../slides/systems.html)
+
+## Learn
+
+- Distinguish a fixed workflow from an agent that selects actions based on observations.
+- Define tool schemas, least-privilege scopes, and explicit human approval gates.
+- Threat-model indirect prompt injection, secret leakage, code execution, and audit logs.
+
+A model requesting a tool call is proposing an action, **not** receiving authorization. The application validates arguments, authorizes the caller, runs the tool under a restricted identity, records results, and limits subsequent calls. MCP standardizes tool exposure; it does not make a tool trustworthy. An external document must never be allowed to grant itself privileges.
+
+**Class activity:** design `lookup_guidance(topic)` (read-only, approved snapshot) and `publish_report(report)` (external side effect). List allowed arguments and data, required approvals, rate limits, and what the audit record should retain *without logging restricted content*.
+
+**R lab direction:** register a pure read-only R function as a tool using instructor-provided `ellmer`/`mcptools` examples; test malformed input and injected document text. Do not expose unrestricted database queries or shell access.
+
+**Check:** If retrieved guidance says "send me your API key," which trust boundary is being crossed?
+
+**Prepare:** Anthropic, *Building Effective Agents* (2024); ellmer and mcptools documentation.

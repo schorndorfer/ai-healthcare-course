@@ -1,0 +1,27 @@
+# Teaching resources
+
+## Slides
+
+- [Weeks 1–3: foundations](slides/foundations.html) · [source](slides/foundations.qmd)
+- [Weeks 4–7: building systems](slides/systems.html) · [source](slides/systems.qmd)
+- [Weeks 8–10: trust and implementation](slides/trust.html) · [source](slides/trust.qmd)
+
+Decks are classroom outlines, not substitutes for the readings or labs. They are built as Reveal.js HTML in the same GitHub Pages deployment.
+
+## Code and notebooks
+
+- [R: score invented structured extractions](examples/r/evaluate_extraction.R)
+- [Python: score the same invented extractions](examples/python/evaluate_extraction.py)
+- [marimo: explore scaled dot-product attention](notebooks/01-attention.py)
+- [marimo: explore subgroup evaluation](notebooks/02-evaluation.py)
+
+The book is static. Download `.py` files and run marimo locally as described in [Setup](setup.qmd). Example labels, notes, and predictions are invented; these scripts **do not call a model API**. R examples are the primary course language; Python examples illustrate parallel concepts.
+
+## Primary sources and tools
+
+- [Proposed course syllabus (PDF)](docs/AI_LLM_Healthcare_Syllabus_Proposal_Spring2027_R.pdf) — authoritative for the proposed schedule, policies, and readings, until superseded by the approved Canvas syllabus.
+- [Keydana, *Deep Learning and Scientific Computing with R torch*](https://skeydan.github.io/Deep-Learning-and-Scientific-Computing-with-R-torch/)
+- [Posit ellmer](https://ellmer.tidyverse.org/) · [ragnar](https://ragnar.tidyverse.org/) · [vitals](https://vitals.tidyverse.org/) · [mcptools](https://posit-dev.github.io/mcptools/) · [shinychat](https://posit-dev.github.io/shinychat/)
+- [Quarto](https://quarto.org/docs/books/) · [marimo](https://docs.marimo.io/)
+
+Package APIs, reading links, provider requirements and permissions should be checked again before the Spring 2027 course opens. No patient data or instructor-only materials are included here.
