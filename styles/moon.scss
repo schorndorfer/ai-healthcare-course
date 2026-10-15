@@ -1,0 +1,23 @@
+/*-- scss:defaults --*/
+// Solarized-inspired companion to the Reveal.js Moon slide theme.
+$body-bg: #002b36;
+$body-color: #c6d0cc;
+$headings-color: #eee8d5;
+$link-color: #65c7d0;
+$primary: #268bd2;
+$border-color: #586e75;
+$code-color: #e5bc55;
+
+/*-- scss:rules --*/
+.sidebar, #quarto-sidebar, #quarto-margin-sidebar {
+  background-color: $body-bg;
+}
+
+pre, div.sourceCode {
+  background-color: #073642;
+  border-color: $border-color;
+}
+
+.table {
+  --bs-table-bg: transparent;
+}

@@ -36,7 +36,7 @@ book:
 
 format:
   html:
-    theme: cosmo
+    theme: [darkly, styles/moon.scss]
     toc: true
     code-copy: true
     link-external-newwindow: true
